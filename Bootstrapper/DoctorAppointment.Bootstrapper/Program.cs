@@ -1,4 +1,7 @@
 
+
+using DoctorBooking.Modules.AppointmentBooking.Api;
+
 namespace DoctorAppointment.Bootstrapper
 {
     public class Program
@@ -13,6 +16,7 @@ namespace DoctorAppointment.Bootstrapper
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAppointmentBookingModule();
 
             var app = builder.Build();
 

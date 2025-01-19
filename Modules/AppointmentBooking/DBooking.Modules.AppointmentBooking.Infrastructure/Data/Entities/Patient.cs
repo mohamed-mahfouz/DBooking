@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities
 {
-    internal class Patient
+    public class Patient
     {
         [Key]
         public Guid Id { get; set; }
@@ -17,9 +17,8 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities
         [StringLength(100, MinimumLength = 3)]
         public required string LastName { get; set; }
 
-        [Required]
         [StringLength(14)]
-        public required string SSN { get; set; }
+        public string SSN { get; set; } = null!;
 
         [Range(0, 100)]
         public int Age { get; set; }
