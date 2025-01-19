@@ -10,8 +10,4 @@
     <ProjectReference Include="..\..\..\Shared\DBooking.Shared\DBooking.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
