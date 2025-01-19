@@ -1,0 +1,6 @@
+@DoctorAppointment.Bootstrapper_HostAddress = http://localhost:5191
+
+GET {{DoctorAppointment.Bootstrapper_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
