@@ -7,6 +7,7 @@ namespace DoctorBooking.Modules.AppointmentBooking.Api
 {
     public static class Extensions
     {
+        //Register as service
         public static IServiceCollection AddAppointmentBookingModule(this IServiceCollection services)
         {
             services.AddAppointmentBookingInfra();
@@ -14,6 +15,7 @@ namespace DoctorBooking.Modules.AppointmentBooking.Api
             return services;
         }
 
+        //Register as middleware
         public static IApplicationBuilder UseAppointmentBookingModule(this IApplicationBuilder app)
         {
 
