@@ -1,12 +1,6 @@
-﻿using DBooking.Module.DoctorAvailability.Application.Dtos;
-using DBooking.Module.DoctorAvailability.Application.Services;
+﻿using DBooking.Module.DoctorAvailability.Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DBooking.Module.DoctorAvailability.Api.Controllers
 {

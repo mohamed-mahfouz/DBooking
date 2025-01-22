@@ -1,14 +1,7 @@
 ﻿using AutoMapper;
 using DBooking.Module.DoctorAvailability.Application.Dtos;
-using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 using DBooking.Module.DoctorAvailability.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace DBooking.Module.DoctorAvailability.Application.Services
 {

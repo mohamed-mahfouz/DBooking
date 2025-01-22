@@ -1,11 +1,6 @@
 ﻿using DBooking.Module.DoctorAvailability.Infrastructure.Data;
 using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DBooking.Module.DoctorAvailability.Infrastructure.Repositories
 {
