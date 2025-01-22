@@ -12,16 +12,11 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure
         public static IServiceCollection AddAppointmentBookingInfra(this IServiceCollection services)
         {
             //services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite("Data source=DBooking.db"));
-
             services.AddSQLServer<AppointmentBookingDbContext>("AppointmentBooking");
-           
             return services;
         }
 
-        public static IApplicationBuilder UseAppointmentBookingInfra(this IApplicationBuilder app)
-        {
-
-            return app;
-        }
+        public static IApplicationBuilder UseAppointmentBookingInfra(this IApplicationBuilder app) => app;
+       
     }
 }

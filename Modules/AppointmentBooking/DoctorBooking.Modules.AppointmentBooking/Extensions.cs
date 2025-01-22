@@ -16,10 +16,7 @@ namespace DoctorBooking.Modules.AppointmentBooking.Api
         }
 
         //Register as middleware
-        public static IApplicationBuilder UseAppointmentBookingModule(this IApplicationBuilder app)
-        {
-
-            return app;
-        }
+        public static IApplicationBuilder UseAppointmentBookingModule(this IApplicationBuilder app) => app;
+       
     }
 }

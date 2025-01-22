@@ -11,19 +11,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{DE4D1A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Bootstrapper", "Bootstrapper\DoctorAppointment.Bootstrapper\DBooking.Bootstrapper.csproj", "{272F4652-EA43-4567-AE47-A65530E5F23F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Modules.AppointmentBooking.Api", "Modules\AppointmentBooking\DoctorBooking.Modules.AppointmentBooking\DBooking.Modules.AppointmentBooking.Api.csproj", "{00DADD3E-835D-48CC-893C-FE85F8B9644C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.AppointmentBooking.Api", "Modules\AppointmentBooking\DoctorBooking.Modules.AppointmentBooking\DBooking.Modules.AppointmentBooking.Api.csproj", "{00DADD3E-835D-48CC-893C-FE85F8B9644C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppointmentBooking", "AppointmentBooking", "{088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Shared", "Shared\DBooking.Shared\DBooking.Shared.csproj", "{C0E0E785-6EC7-4DDD-A38E-7A6570DA2C96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Shared", "Shared\DBooking.Shared\DBooking.Shared.csproj", "{C0E0E785-6EC7-4DDD-A38E-7A6570DA2C96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Modules.AppointmentBooking.Application", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Application\DBooking.Modules.AppointmentBooking.Application.csproj", "{FBE985D4-FB4F-4397-9907-E38017C4DB4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.AppointmentBooking.Application", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Application\DBooking.Modules.AppointmentBooking.Application.csproj", "{FBE985D4-FB4F-4397-9907-E38017C4DB4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Modules.AppointmentBooking.Shared", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Shared\DBooking.Modules.AppointmentBooking.Shared.csproj", "{9AF3D7A2-5F14-4AD2-AF2D-4AB0ACEB75A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.AppointmentBooking.Shared", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Shared\DBooking.Modules.AppointmentBooking.Shared.csproj", "{9AF3D7A2-5F14-4AD2-AF2D-4AB0ACEB75A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Modules.AppointmentBooking.Core", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Core\DBooking.Modules.AppointmentBooking.Core.csproj", "{AACFDB1C-F880-450F-B353-0D5806412582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.AppointmentBooking.Core", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Core\DBooking.Modules.AppointmentBooking.Core.csproj", "{AACFDB1C-F880-450F-B353-0D5806412582}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.AppointmentBooking.Infrastructure", "Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Infrastructure\DBooking.Modules.AppointmentBooking.Infrastructure.csproj", "{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorAvailability", "DoctorAvailability", "{F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Api", "DBooking.Module.DoctorAvailability.Api\DBooking.Module.DoctorAvailability.Api.csproj", "{AEF70E19-F296-4E33-B796-474180FB347F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Application", "DBooking.Module.DoctorAvailability.Application\DBooking.Module.DoctorAvailability.Application.csproj", "{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Infrastructure", "DBooking.Module.DoctorAvailability.Infrastructure\DBooking.Module.DoctorAvailability.Infrastructure.csproj", "{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +67,18 @@ Global
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF70E19-F296-4E33-B796-474180FB347F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF70E19-F296-4E33-B796-474180FB347F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF70E19-F296-4E33-B796-474180FB347F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF70E19-F296-4E33-B796-474180FB347F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +92,10 @@ Global
 		{9AF3D7A2-5F14-4AD2-AF2D-4AB0ACEB75A3} = {088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}
 		{AACFDB1C-F880-450F-B353-0D5806412582} = {088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F} = {088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}
+		{F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F} = {06652150-C802-4CDD-936F-40AB66052B83}
+		{AEF70E19-F296-4E33-B796-474180FB347F} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {502952E4-D8F3-4210-A69E-D870A0CF0DB5}

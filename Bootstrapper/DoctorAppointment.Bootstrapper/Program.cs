@@ -1,5 +1,7 @@
 
 
+using DBooking.Module.DoctorAvailability.Api;
+using DBooking.Module.DoctorAvailability.Infrastructure;
 using DoctorBooking.Modules.AppointmentBooking.Api;
 
 namespace DoctorAppointment.Bootstrapper
@@ -17,6 +19,9 @@ namespace DoctorAppointment.Bootstrapper
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAppointmentBookingModule();
+            builder.Services.AddDoctorAvailabilityModule();
+            builder.Services.AddAutoMapper(typeof(Program));
+
 
             var app = builder.Build();
 
