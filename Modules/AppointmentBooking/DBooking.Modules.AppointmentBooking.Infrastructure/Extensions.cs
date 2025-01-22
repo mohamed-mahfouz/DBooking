@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using DBooking.Modules.AppointmentBooking.Infrastructure.Data;
+using DBooking.Shared.Databases;
 
 
 namespace DBooking.Modules.AppointmentBooking.Infrastructure
@@ -10,7 +11,9 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure
     {
         public static IServiceCollection AddAppointmentBookingInfra(this IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite("Data source=DBooking.db"));
+            //services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite("Data source=DBooking.db"));
+
+            services.AddSQLServer<AppointmentBookingDbContext>("AppointmentBooking");
            
             return services;
         }
