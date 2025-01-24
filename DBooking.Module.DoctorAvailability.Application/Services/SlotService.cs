@@ -3,7 +3,6 @@ using DBooking.Module.DoctorAvailability.Application.Dtos;
 using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 using DBooking.Module.DoctorAvailability.Infrastructure.Repositories;
 using DBooking.Shared.Databases;
-using Microsoft.EntityFrameworkCore;
 
 namespace DBooking.Module.DoctorAvailability.Application.Services
 {

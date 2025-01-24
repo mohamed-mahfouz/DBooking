@@ -1,7 +1,4 @@
-
-
 using DBooking.Module.DoctorAvailability.Api;
-using DBooking.Module.DoctorAvailability.Infrastructure;
 using DoctorBooking.Modules.AppointmentBooking.Api;
 
 namespace DoctorAppointment.Bootstrapper

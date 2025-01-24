@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DBooking.Module.DoctorAvailability.Infrastructure\DBooking.Module.DoctorAvailability.Infrastructure.csproj" />
+    <ProjectReference Include="..\DBooking.Module.DoctorAvailability.Shared\DBooking.Module.DoctorAvailability.Shared.csproj" />
   </ItemGroup>
 
 </Project>

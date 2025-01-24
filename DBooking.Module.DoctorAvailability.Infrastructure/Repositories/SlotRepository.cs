@@ -1,7 +1,6 @@
 ﻿using DBooking.Module.DoctorAvailability.Infrastructure.Data;
 using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 
 namespace DBooking.Module.DoctorAvailability.Infrastructure.Repositories
 {
