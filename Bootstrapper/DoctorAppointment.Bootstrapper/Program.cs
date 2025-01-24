@@ -1,5 +1,4 @@
-
-
+using DBooking.Module.DoctorAvailability.Api;
 using DoctorBooking.Modules.AppointmentBooking.Api;
 
 namespace DoctorAppointment.Bootstrapper
@@ -11,12 +10,14 @@ namespace DoctorAppointment.Bootstrapper
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddEndpointsApiExplorer(); // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddSwaggerGen();
+
+            //register modules
             builder.Services.AddAppointmentBookingModule();
+            builder.Services.AddDoctorAvailabilityModule();
+
 
             var app = builder.Build();
 
@@ -28,10 +29,7 @@ namespace DoctorAppointment.Bootstrapper
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();
