@@ -1,5 +1,6 @@
 ﻿
 using DBooking.Modules.AppointmentBooking.Infrastructure;
+using DoctorBooking.Modules.AppointmentBooking.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,7 +11,8 @@ namespace DoctorBooking.Modules.AppointmentBooking.Api
         //Register as service
         public static IServiceCollection AddAppointmentBookingModule(this IServiceCollection services)
         {
-            services.AddAppointmentBookingInfra();
+            services.AddAppointmentBookingInfra()
+                    .AddAppointmentBookingApplication();
 
             return services;
         }

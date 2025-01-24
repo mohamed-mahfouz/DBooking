@@ -4,6 +4,7 @@ using DBooking.Modules.AppointmentBooking.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBooking.Modules.AppointmentBooking.Infrastructure.Migrations
 {
     [DbContext(typeof(AppointmentBookingDbContext))]
-    partial class AppointmentBookingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250123193421_CreateAppointmentsTable")]
+    partial class CreateAppointmentsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,33 +78,6 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("Patients", "AppointmentBooking");
-                });
-
-            modelBuilder.Entity("DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities.Slot", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Cost")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("DoctorId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("DoctorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsReserved")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Slots", "AppointmentBooking");
                 });
 
             modelBuilder.Entity("DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities.Patient", b =>

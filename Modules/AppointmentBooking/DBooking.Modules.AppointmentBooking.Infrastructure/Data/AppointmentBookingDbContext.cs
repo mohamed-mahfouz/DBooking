@@ -6,6 +6,8 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Data
     public class AppointmentBookingDbContext(DbContextOptions<AppointmentBookingDbContext> options) : DbContext(options)
     {
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Appointment> Appointments{ get; set; }
+        public DbSet<Slot> Slots{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
