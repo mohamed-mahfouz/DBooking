@@ -1,4 +1,5 @@
-﻿using DBooking.Module.DoctorAvailability.Application.Services;
+﻿using DBooking.Module.DoctorAvailability.Application.Dtos;
+using DBooking.Module.DoctorAvailability.Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +9,13 @@ namespace DBooking.Module.DoctorAvailability.Api.Controllers
     {
         private readonly SlotService _slotService = slotService;
 
-        [HttpGet("Slots")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> GetList() => Ok(await _slotService.GetMySlotsAsync());
+        [HttpGet("GetMySlots")]
+        public async Task<IActionResult> GetList(int pageNumber = 1, int maxCount = int.MaxValue)
+            => Ok(await _slotService.GetMySlotsAsync(pageNumber, maxCount));
+
+        [HttpPost("AddSlot")]
+        public async Task<IActionResult> AddSlot(AddSlotDto addSlotDto) 
+            => Ok(await _slotService.AddSlot(addSlotDto));
 
     }
 }

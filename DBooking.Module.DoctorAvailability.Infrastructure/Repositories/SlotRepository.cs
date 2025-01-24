@@ -1,6 +1,7 @@
 ﻿using DBooking.Module.DoctorAvailability.Infrastructure.Data;
 using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 
 namespace DBooking.Module.DoctorAvailability.Infrastructure.Repositories
 {
@@ -8,7 +9,16 @@ namespace DBooking.Module.DoctorAvailability.Infrastructure.Repositories
     {
         private readonly DoctorAvailabilityDbContext _context = context;
 
-        public async Task<IQueryable<Slot>> GetAll() => _context.Slots.AsNoTracking();
+        public async Task<IEnumerable<Slot>> GetAll(int pageNumber = 1, int maxCount = int.MaxValue)
+        {
+            return await _context.Slots
+                                 .AsNoTracking()
+                                 .OrderByDescending(x => x.CreationDate)
+                                 .Skip((1 - pageNumber) * maxCount)
+                                 .Take(maxCount)
+                                 .ToListAsync();
+        }
+
 
         public async Task<Slot> AddSlot(Slot slot)
         {

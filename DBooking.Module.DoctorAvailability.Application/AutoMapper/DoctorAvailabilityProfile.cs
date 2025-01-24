@@ -4,13 +4,15 @@ using DBooking.Module.DoctorAvailability.Infrastructure.Data.Entities;
 
 namespace DBooking.Module.DoctorAvailability.Application.AutoMapper
 {
-    public class MappingProfile : Profile
+    public class DoctorAvailabilityProfile : Profile
     {
-        public MappingProfile()
+        public DoctorAvailabilityProfile()
         {
             // Add mappings here
             CreateMap<Slot, SlotDto>();
             CreateMap<SlotDto, Slot>();
+
+            CreateMap<AddSlotDto, Slot>();
         }
     }
 }
