@@ -1,6 +1,6 @@
-﻿using DBooking.Module.DoctorAvailability.Shared;
-using DBooking.Modules.AppointmentBooking.Application.DTOs;
+﻿using DBooking.Modules.AppointmentBooking.Application.DTOs;
 using DBooking.Modules.AppointmentBooking.Application.Mappers;
+using DBooking.Modules.DoctorAvailability.Shared;
 using MediatR;
 
 namespace DBooking.Modules.AppointmentBooking.Application.Queries

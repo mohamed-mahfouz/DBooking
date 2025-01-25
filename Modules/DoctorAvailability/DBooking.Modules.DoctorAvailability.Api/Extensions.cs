@@ -2,6 +2,7 @@
 using DBooking.Modules.DoctorAvailability.Application.Services;
 using DBooking.Modules.DoctorAvailability.Infrastructure;
 using DBooking.Modules.DoctorAvailability.Infrastructure.Repositories;
+using DBooking.Modules.DoctorAvailability.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -1,5 +1,5 @@
-﻿using DBooking.Module.DoctorAvailability.Shared.DTO;
-using DBooking.Modules.AppointmentBooking.Application.DTOs;
+﻿using DBooking.Modules.AppointmentBooking.Application.DTOs;
+using DBooking.Modules.DoctorAvailability.Shared.DTO;
 
 namespace DBooking.Modules.AppointmentBooking.Application.Mappers
 {
