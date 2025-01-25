@@ -9,7 +9,6 @@ namespace DBooking.Module.DoctorAvailability.Infrastructure
     {
         public static IServiceCollection AddDoctorAvailabilityInfra(this IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite("Data source=DBooking.db"));
             services.AddSQLServer<DoctorAvailabilityDbContext>("DoctorAvailability");
 
             return services;

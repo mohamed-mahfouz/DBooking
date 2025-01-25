@@ -1,18 +1,23 @@
-﻿using DBooking.Modules.AppointmentBooking.Application.DTOs;
-using DBooking.Modules.AppointmentBooking.Application.Interfaces;
+﻿using DBooking.Module.DoctorAvailability.Shared;
+using DBooking.Modules.AppointmentBooking.Application.DTOs;
 using DBooking.Modules.AppointmentBooking.Application.Mappers;
 using MediatR;
 
 namespace DBooking.Modules.AppointmentBooking.Application.Queries
 {
-    public record GetAvailableSlotsQuery(): IRequest<IEnumerable<SlotResponse>>;
+    public record GetAvailableSlotsQuery(): IRequest<IEnumerable<AvailableSlotResponse>>;
 
-    public class GetAvailableSlotsHandler(ISlotRepository slotRepository) : IRequestHandler<GetAvailableSlotsQuery, IEnumerable<SlotResponse>>
+    public class GetAvailableSlotsHandler(IDoctorAvailabilityModuleApi doctorAvailabilityModuleApi) : IRequestHandler<GetAvailableSlotsQuery, IEnumerable<AvailableSlotResponse>>
     {
-        public async Task<IEnumerable<SlotResponse>> Handle(GetAvailableSlotsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<AvailableSlotResponse>> Handle(GetAvailableSlotsQuery request, CancellationToken cancellationToken)
         {
-            var slots = await slotRepository.GetAvailableSlotsAsync();
-            return slots?.Select(x => SlotMapper.MapToResponse(x)).ToList() ?? Enumerable.Empty<SlotResponse>();
+            var allSlots =  await doctorAvailabilityModuleApi.GetMySlotsAsync();
+         
+            var availableSlots = allSlots.Where(x => !x.IsReserved)
+                .Select(x => SlotMapper.MapToResponse(x))
+                .ToList();
+
+            return availableSlots;
         }
     }
 

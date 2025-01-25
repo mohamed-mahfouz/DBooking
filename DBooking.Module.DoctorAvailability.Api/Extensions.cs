@@ -2,6 +2,7 @@
 using DBooking.Module.DoctorAvailability.Application.Services;
 using DBooking.Module.DoctorAvailability.Infrastructure;
 using DBooking.Module.DoctorAvailability.Infrastructure.Repositories;
+using DBooking.Module.DoctorAvailability.Shared;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,7 +19,7 @@ namespace DBooking.Module.DoctorAvailability.Api
             //register services
             services.AddScoped<SlotService>();
             services.AddScoped<SlotRepository>();
-
+            services.AddScoped<IDoctorAvailabilityModuleApi, DoctorAvailabilityModuleApi>();
 
             //others
             services.AddAutoMapper(typeof(DoctorAvailabilityProfile));

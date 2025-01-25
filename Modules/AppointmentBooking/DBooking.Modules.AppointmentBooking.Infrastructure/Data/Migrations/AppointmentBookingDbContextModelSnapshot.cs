@@ -4,7 +4,6 @@ using DBooking.Modules.AppointmentBooking.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,11 +11,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DBooking.Modules.AppointmentBooking.Infrastructure.Migrations
 {
     [DbContext(typeof(AppointmentBookingDbContext))]
-    [Migration("20250124182631_CreateSlotsTable")]
-    partial class CreateSlotsTable
+    partial class AppointmentBookingDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,11 +32,17 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Migrations
                     b.Property<Guid>("PatientId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("PatientName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ReservedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<Guid>("SlotId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -78,33 +81,6 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("Patients", "AppointmentBooking");
-                });
-
-            modelBuilder.Entity("DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities.Slot", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<decimal>("Cost")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("DoctorId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("DoctorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsReserved")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Slots", "AppointmentBooking");
                 });
 
             modelBuilder.Entity("DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities.Patient", b =>

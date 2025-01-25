@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DBooking.Modules.AppointmentBooking.Application\DBooking.Modules.AppointmentBooking.Application.csproj" />
+    <ProjectReference Include="..\DBooking.Modules.AppointmentBooking.Core\DBooking.Modules.AppointmentBooking.Core.csproj" />
   </ItemGroup>
 
 </Project>

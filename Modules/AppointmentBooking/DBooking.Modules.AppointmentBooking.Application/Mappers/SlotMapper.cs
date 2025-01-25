@@ -1,20 +1,17 @@
-﻿using DBooking.Modules.AppointmentBooking.Application.DTOs;
-using DBooking.Shared.Entities;
+﻿using DBooking.Module.DoctorAvailability.Shared.DTO;
+using DBooking.Modules.AppointmentBooking.Application.DTOs;
 
 namespace DBooking.Modules.AppointmentBooking.Application.Mappers
 {
     internal static class SlotMapper
     {
-        public static SlotResponse MapToResponse(SlotEntity slotEntity)
+        public static AvailableSlotResponse MapToResponse(SlotSharedDto slotDto)
         {
-            return new SlotResponse
+            return new AvailableSlotResponse
             {
-                Id = slotEntity.Id,
-                Cost = slotEntity.Cost,
-                Date = slotEntity.Date,
-                DoctorId = slotEntity.DoctorId,
-                DoctorName = slotEntity.DoctorName,
-                IsReserved = slotEntity.IsReserved
+                Cost = slotDto.Cost,
+                Date = slotDto.Time,
+                DoctorName = slotDto.DoctorName,
             };
         }
     }

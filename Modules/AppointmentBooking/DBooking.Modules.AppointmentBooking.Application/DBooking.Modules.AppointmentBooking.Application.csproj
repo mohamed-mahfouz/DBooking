@@ -7,12 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\DBooking.Module.DoctorAvailability.Shared\DBooking.Module.DoctorAvailability.Shared.csproj" />
     <ProjectReference Include="..\..\..\Shared\DBooking.Shared\DBooking.Shared.csproj" />
     <ProjectReference Include="..\DBooking.Modules.AppointmentBooking.Core\DBooking.Modules.AppointmentBooking.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\DBooking.Modules.AppointmentBooking.Shared\DBooking.Modules.AppointmentBooking.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

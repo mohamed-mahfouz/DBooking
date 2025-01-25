@@ -13,10 +13,8 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure
     {
         public static IServiceCollection AddAppointmentBookingInfra(this IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite("Data source=DBooking.db"));
             services.AddSQLServer<AppointmentBookingDbContext>("AppointmentBooking");
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
-            services.AddScoped<ISlotRepository, SlotRepository>();
             return services;
         }
 

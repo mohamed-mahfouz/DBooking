@@ -1,7 +1,7 @@
 ﻿using DBooking.Modules.AppointmentBooking.Core.Entities;
 using DBooking.Modules.AppointmentBooking.Infrastructure.Data.Entities;
 
-namespace DBooking.Modules.AppointmentBooking.Infrastructure.Mappers
+namespace DBooking.Modules.AppointmentBooking.Infrastructure.Data.Mappers
 {
     internal static class AppointmentMapper
     {
@@ -12,7 +12,8 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Mappers
                 Id = appointment.Id,
                 PatientId = appointment.PatientId,
                 ReservedAt = appointment.ReservedAt,
-                SlotId = appointment.SlotId 
+                SlotId = appointment.SlotId,
+                PatientName = appointment?.PatientName!,               
             };
         }
 
@@ -23,7 +24,9 @@ namespace DBooking.Modules.AppointmentBooking.Infrastructure.Mappers
                 Id = appointmentEntity.Id,
                 PatientId = appointmentEntity.PatientId,
                 ReservedAt = appointmentEntity.ReservedAt,
-                SlotId = appointmentEntity.SlotId
+                SlotId = appointmentEntity.SlotId,
+                PatientName = appointmentEntity.PatientName,
+                Status = appointmentEntity.Status
             };
         }
     }
