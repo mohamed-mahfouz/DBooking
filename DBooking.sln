@@ -27,13 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.Appointmen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorAvailability", "DoctorAvailability", "{F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Api", "DBooking.Module.DoctorAvailability.Api\DBooking.Module.DoctorAvailability.Api.csproj", "{AEF70E19-F296-4E33-B796-474180FB347F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.DoctorAvailability.Api", "Modules\DoctorAvailability\DBooking.Modules.DoctorAvailability.Api\DBooking.Modules.DoctorAvailability.Api.csproj", "{8C283C4F-F12C-4929-81B7-130DBC0CCD2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Application", "DBooking.Module.DoctorAvailability.Application\DBooking.Module.DoctorAvailability.Application.csproj", "{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.DoctorAvailability.Application", "Modules\DoctorAvailability\DBooking.Modules.DoctorAvailability.Application\DBooking.Modules.DoctorAvailability.Application.csproj", "{354B27F7-669D-4285-B374-1C5BB09C2200}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Infrastructure", "DBooking.Module.DoctorAvailability.Infrastructure\DBooking.Module.DoctorAvailability.Infrastructure.csproj", "{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.DoctorAvailability.Infrastructure", "Modules\DoctorAvailability\DBooking.Modules.DoctorAvailability.Infrastructure\DBooking.Modules.DoctorAvailability.Infrastructure.csproj", "{3E461E90-968B-47E4-B850-9B9C3C981007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBooking.Module.DoctorAvailability.Shared", "DBooking.Module.DoctorAvailability.Shared\DBooking.Module.DoctorAvailability.Shared.csproj", "{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBooking.Modules.DoctorAvailability.Shared", "Modules\DoctorAvailability\DBooking.Modules.DoctorAvailability.Shared\DBooking.Modules.DoctorAvailability.Shared.csproj", "{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,22 +69,22 @@ Global
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEF70E19-F296-4E33-B796-474180FB347F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEF70E19-F296-4E33-B796-474180FB347F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEF70E19-F296-4E33-B796-474180FB347F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEF70E19-F296-4E33-B796-474180FB347F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C283C4F-F12C-4929-81B7-130DBC0CCD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C283C4F-F12C-4929-81B7-130DBC0CCD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C283C4F-F12C-4929-81B7-130DBC0CCD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C283C4F-F12C-4929-81B7-130DBC0CCD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354B27F7-669D-4285-B374-1C5BB09C2200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354B27F7-669D-4285-B374-1C5BB09C2200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354B27F7-669D-4285-B374-1C5BB09C2200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354B27F7-669D-4285-B374-1C5BB09C2200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E461E90-968B-47E4-B850-9B9C3C981007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E461E90-968B-47E4-B850-9B9C3C981007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E461E90-968B-47E4-B850-9B9C3C981007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E461E90-968B-47E4-B850-9B9C3C981007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,10 +99,10 @@ Global
 		{AACFDB1C-F880-450F-B353-0D5806412582} = {088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}
 		{6CDE627D-48E6-49B5-BFBD-774EA41B8C4F} = {088DCCA1-B3BA-44D9-AC2C-FEB6CA0EC17E}
 		{F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F} = {06652150-C802-4CDD-936F-40AB66052B83}
-		{AEF70E19-F296-4E33-B796-474180FB347F} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
-		{E1895D6D-DCC9-4C6A-9F35-76A0413D1DF4} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
-		{E8DB1D82-EEBE-4D2D-84C0-B236C4723C1E} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
-		{DFFB780E-51A1-40EE-9DC1-3CB1CBC8A625} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{8C283C4F-F12C-4929-81B7-130DBC0CCD2B} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{354B27F7-669D-4285-B374-1C5BB09C2200} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{3E461E90-968B-47E4-B850-9B9C3C981007} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
+		{BF1A32C4-5F9A-469E-85E4-BC0E41C53C6B} = {F7ACAF49-38E0-4A9A-B70F-E126FCAFAF4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {502952E4-D8F3-4210-A69E-D870A0CF0DB5}
