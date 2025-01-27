@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modules\AppointmentBooking\DBooking.Modules.AppointmentBooking.Shared\DBooking.Modules.AppointmentBooking.Shared.csproj" />
+    <ProjectReference Include="..\..\AppointmentBooking\DBooking.Modules.AppointmentBooking.Shared\DBooking.Modules.AppointmentBooking.Shared.csproj" />
   </ItemGroup>
 
 </Project>
