@@ -1,5 +1,6 @@
 using DBooking.Modules.DoctorAvailability.Api;
 using DoctorBooking.Modules.AppointmentBooking.Api;
+using DoctorBooking.Modules.AppointmentConfirmation.Api;
 
 namespace DoctorAppointment.Bootstrapper
 {
@@ -17,7 +18,7 @@ namespace DoctorAppointment.Bootstrapper
             //register modules
             builder.Services.AddAppointmentBookingModule();
             builder.Services.AddDoctorAvailabilityModule();
-
+            builder.Services.AddAppointmentConfirmationModule(); 
 
             var app = builder.Build();
 
