@@ -7,7 +7,7 @@ namespace DBooking.Modules.AppointmentBooking.Application.Commands
 {
     public record CreateAppointmentCommand(CreateAppointmentRequest Request) : IRequest;
 
-    public class CreateAppointmentHandler(IAppointmentRepository appointmentRepository) : IRequestHandler<CreateAppointmentCommand>
+    public class CreateAppointmentHandler(IAppointmentRepository appointmentRepository, IAppointmentEventPublisher appointmentEventPublisher) : IRequestHandler<CreateAppointmentCommand>
     {
         public async Task Handle(CreateAppointmentCommand command, CancellationToken cancellationToken)
         {
@@ -20,6 +20,8 @@ namespace DBooking.Modules.AppointmentBooking.Application.Commands
             };
 
            await appointmentRepository.CreateAppointment(newAppointment);
+
+          appointmentEventPublisher.TriggerAppointmentCreatedEvent(newAppointment.PatientName, newAppointment.ReservedAt);
         }
     }
 
