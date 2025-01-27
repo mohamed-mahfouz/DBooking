@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DBooking.Modules.AppointmentManagement.Internal\DBooking.Modules.AppointmentManagement.Internal.csproj" />
     <ProjectReference Include="..\..\Modules\AppointmentBooking\DoctorBooking.Modules.AppointmentBooking\DBooking.Modules.AppointmentBooking.Api.csproj" />
     <ProjectReference Include="..\..\Modules\DoctorAvailability\DBooking.Modules.DoctorAvailability.Api\DBooking.Modules.DoctorAvailability.Api.csproj" />
   </ItemGroup>
